@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 //including header file 
 #include "converting.h"
 
@@ -26,6 +27,17 @@ void converting(void)
 		printf("Converted number is %f\n", double_number); //prints the converted value
 	}
 	printf("*** End of Converting Strings to double Demo ***\n\n");
+	printf("*** Start of Converting String to long double Demo ***\n");
+	char long_string[80]; //defining CString with 79 vaild char and 1 null terminator
+	long long_number; //defining long value
+	while (TRUE) { //loop runs until TRUE is 1. if TRUE not equal to 1 the loop stops
+		printf("Type the double numeric string (q - to quit):\n");
+		gets(long_string); //allows user to enter value and stores in long_string variable
+		if (strcmp(long_string, "q") == 0) break; //if user enters q then loops break
+		long_number = atol(long_string); //user entred string is converted to long value
+		printf("Converted number is %ld\n", long_number); //prints the converted value
+	}
+	printf("*** End of Converting String to long double Demo ***\n");
 	return;
 }
 

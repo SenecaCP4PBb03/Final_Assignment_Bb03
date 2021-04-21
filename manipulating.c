@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 //indexing strings
 #include "manipulating.h"
 
@@ -37,4 +38,23 @@ void manipulating() {
 			printf("lst string is greater than 2nd\n");
 	}
 	printf("*** End of Comparing Strings Demo ***\n\n");
+	printf("*** Start of Searching Strings Demo ***\n");
+	char big_string[80]; //means that an 80 character space is alloted here even if space isnt fully used
+	char sub_string[80];
+	char* address;
+	while (TRUE) {
+		printf("Type the big string (q - to quit):\n");
+		gets(big_string);
+		if (strcmp(big_string, "q") == 0) break;//strcmp compares the strings and returns an integer value based on results
+		printf("Type the substring:\n");
+		gets(sub_string);
+		address = strstr(big_string, sub_string);
+		if (address != NULL)
+			printf("Found at %ld position\n", (long)address - (long)big_string); //%ld a format specifier for representing long integer values 
+		else
+			printf("Not found\n");
+
+		printf("*** End of Searching Strings Demo ***\n\n");
+	}
+	return;
 }
