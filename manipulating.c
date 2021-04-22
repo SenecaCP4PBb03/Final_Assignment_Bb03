@@ -52,9 +52,8 @@ void manipulating() {
 		if (address != NULL)
 			printf("Found at %ld position\n", (long)address - (long)big_string); //%ld a format specifier for representing long integer values 
 		else
-			printf("Not found\n");
-
-		printf("*** End of Searching Strings Demo ***\n\n");
+			printf("Not found\n");		
 	}
+	printf("*** End of Searching Strings Demo ***\n\n");
 	return;
 }
